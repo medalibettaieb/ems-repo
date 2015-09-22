@@ -1,8 +1,8 @@
-package services.impl;
+package training.services.impl;
 
 import javax.ejb.Stateful;
 
-import services.interfaces.AccumulatorServiceRemote;
+import training.services.interfaces.AccumulatorServiceRemote;
 
 /**
  * Session Bean implementation class AccumulatorService

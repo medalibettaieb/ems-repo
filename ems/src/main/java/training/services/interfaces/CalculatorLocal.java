@@ -1,4 +1,4 @@
-package ems.services.interfaces;
+package training.services.interfaces;
 
 import javax.ejb.Local;
 

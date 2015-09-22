@@ -14,7 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import services.interfaces.AccumulatorServiceRemote;
+import training.services.interfaces.AccumulatorServiceRemote;
 
 public class AccumulatorApp extends JFrame {
 

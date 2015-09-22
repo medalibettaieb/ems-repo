@@ -1,4 +1,4 @@
-package services.interfaces;
+package training.services.interfaces;
 
 import javax.ejb.Remote;
 

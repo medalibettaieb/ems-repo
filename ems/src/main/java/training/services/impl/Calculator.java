@@ -1,9 +1,9 @@
-package ems.services.impl;
+package training.services.impl;
 
 import javax.ejb.Stateless;
 
-import ems.services.interfaces.CalculatorLocal;
-import ems.services.interfaces.CalculatorRemote;
+import training.services.interfaces.CalculatorLocal;
+import training.services.interfaces.CalculatorRemote;
 
 /**
  * Session Bean implementation class Calculator

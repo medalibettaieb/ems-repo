@@ -4,7 +4,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import ems.services.interfaces.CalculatorRemote;
+import training.services.interfaces.CalculatorRemote;
 
 public class TestCalculator {
 

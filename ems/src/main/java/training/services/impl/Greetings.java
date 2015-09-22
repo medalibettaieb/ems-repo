@@ -1,9 +1,9 @@
-package ems.services.impl;
+package training.services.impl;
 
 import javax.ejb.Stateless;
 
-import ems.services.interfaces.IGreetingsLocal;
-import ems.services.interfaces.IGreetingsRemote;
+import training.services.interfaces.IGreetingsLocal;
+import training.services.interfaces.IGreetingsRemote;
 
 @Stateless
 public class Greetings implements IGreetingsLocal, IGreetingsRemote {

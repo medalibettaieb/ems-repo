@@ -1,9 +1,9 @@
-package services.impl;
+package training.services.impl;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
-import services.interfaces.TranslatorServiceRemote;
+import training.services.interfaces.TranslatorServiceRemote;
 
 @Stateless
 public class TranslatorService implements TranslatorServiceRemote {

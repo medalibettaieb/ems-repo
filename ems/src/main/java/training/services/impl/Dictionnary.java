@@ -1,4 +1,4 @@
-package services.impl;
+package training.services.impl;
 
 import java.util.HashMap;
 import java.util.Map;
