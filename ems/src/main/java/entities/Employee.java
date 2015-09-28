@@ -10,7 +10,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-
+@Table(name="T_EMP")
 public class Employee implements Serializable {
 
 	

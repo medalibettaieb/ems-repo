@@ -16,8 +16,7 @@ public class TestAddEmployee {
 				.lookup(jndiName);
 
 		Employee employee = new Employee();
-		employee.setId(1);
-		employee.setName("seif");
+		employee.setName("foulen");
 
 		System.out.println(proxy.addEmployee(employee));
 	}

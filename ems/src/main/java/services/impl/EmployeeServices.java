@@ -20,7 +20,6 @@ public class EmployeeServices implements EmployeeServicesRemote {
 	 * Default constructor.
 	 */
 	public EmployeeServices() {
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
