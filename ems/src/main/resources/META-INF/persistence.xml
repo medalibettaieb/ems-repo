@@ -5,6 +5,7 @@
 	<persistence-unit name="ems">
 		<jta-data-source>java:jboss/datasources/MySQLDS</jta-data-source>
 		<class>entities.Employee</class>
+		<class>entities.Department</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate.show_sql" value="true" />
