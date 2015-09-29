@@ -34,4 +34,33 @@ public class EmployeeServices implements EmployeeServicesRemote {
 		return b;
 	}
 
+	@Override
+	public Employee findEmployeeById(Integer id) {
+		return entityManager.find(Employee.class, id);
+	}
+
+	@Override
+	public Boolean deleteEmployee(Employee employee) {
+		Boolean b = false;
+		try {
+			entityManager.remove(entityManager.merge(employee));
+			b = true;
+		} catch (Exception e) {
+			System.err.println("problem deleting employee");
+		}
+		return b;
+	}
+
+	@Override
+	public Boolean updateEmployee(Employee employee) {
+		Boolean b = false;
+		try {
+			entityManager.merge(employee);
+			b = true;
+		} catch (Exception e) {
+			System.err.println("problem deleting employee");
+		}
+		return b;
+	}
+
 }
