@@ -6,7 +6,7 @@
 		<jta-data-source>java:jboss/datasources/MySQLDS</jta-data-source>
 		<class>entities.Employee</class>
 		<class>entities.Department</class>
-		<class>training.entities.oneToOneBi.A</class>
+	<!-- 	<class>training.entities.oneToOneBi.A</class>
 		<class>training.entities.oneToOneBi.B</class>
 		<class>training.entities.oneToOneUni.C</class>
 		<class>training.entities.oneToOneUni.D</class>
@@ -17,11 +17,11 @@
 		<class>training.entities.oneToManyUniSlaveSide.I</class>
 		<class>training.entities.oneToManyUniSlaveSide.J</class>
 		<class>training.entities.manyToManyBi.K</class>
-		<class>training.entities.manyToManyBi.L</class>
+		<class>training.entities.manyToManyBi.L</class> -->
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="create" />
-			<property name="hibernate.show_sql" value="true" />
-			<property name="hibernate.format_sql" value="true" />
+			<!-- <property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" /> -->
 		</properties>
 	</persistence-unit>
 </persistence>

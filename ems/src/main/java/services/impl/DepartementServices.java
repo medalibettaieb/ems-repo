@@ -6,6 +6,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import services.interfaces.DepartementServicesLocal;
 import services.interfaces.DepartementServicesRemote;
 import entities.Department;
 
@@ -13,7 +14,7 @@ import entities.Department;
  * Session Bean implementation class DepartementServices
  */
 @Stateless
-public class DepartementServices implements DepartementServicesRemote {
+public class DepartementServices implements DepartementServicesRemote, DepartementServicesLocal {
 
 	@PersistenceContext
 	private EntityManager entityManager;
@@ -24,6 +25,9 @@ public class DepartementServices implements DepartementServicesRemote {
 	public DepartementServices() {
 	}
 
+	/* (non-Javadoc)
+	 * @see services.impl.DepartementServicesLocal#addDepartement(entities.Department)
+	 */
 	@Override
 	public Boolean addDepartement(Department department) {
 		Boolean b = false;
@@ -36,6 +40,9 @@ public class DepartementServices implements DepartementServicesRemote {
 		return b;
 	}
 
+	/* (non-Javadoc)
+	 * @see services.impl.DepartementServicesLocal#deleteDepartement(java.lang.Integer)
+	 */
 	@Override
 	public Boolean deleteDepartement(Integer id) {
 		Boolean b = false;
@@ -48,6 +55,9 @@ public class DepartementServices implements DepartementServicesRemote {
 		return b;
 	}
 
+	/* (non-Javadoc)
+	 * @see services.impl.DepartementServicesLocal#updateDepartement(entities.Department)
+	 */
 	@Override
 	public Boolean updateDepartement(Department department) {
 		Boolean b = false;
@@ -60,11 +70,17 @@ public class DepartementServices implements DepartementServicesRemote {
 		return b;
 	}
 
+	/* (non-Javadoc)
+	 * @see services.impl.DepartementServicesLocal#findDepartmentById(java.lang.Integer)
+	 */
 	@Override
 	public Department findDepartmentById(Integer id) {
 		return entityManager.find(Department.class, id);
 	}
 
+	/* (non-Javadoc)
+	 * @see services.impl.DepartementServicesLocal#findAllDepartments()
+	 */
 	@Override
 	public List<Department> findAllDepartments() {
 		return entityManager.createQuery("select d from Departement d")
