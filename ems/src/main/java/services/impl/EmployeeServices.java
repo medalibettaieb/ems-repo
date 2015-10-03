@@ -1,8 +1,11 @@
 package services.impl;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import services.interfaces.EmployeeServicesRemote;
 import entities.Employee;
@@ -61,6 +64,13 @@ public class EmployeeServices implements EmployeeServicesRemote {
 			System.err.println("problem deleting employee");
 		}
 		return b;
+	}
+
+	@Override
+	public List<Employee> findAllEmployees() {
+		String jpql="select e from Employee e ";
+		Query query=entityManager.createQuery(jpql);  
+		return query.getResultList();
 	}
 
 }

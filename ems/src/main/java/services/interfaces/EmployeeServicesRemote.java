@@ -1,5 +1,7 @@
 package services.interfaces;
 
+import java.util.List;
+
 import javax.ejb.Remote;
 
 import entities.Employee;
@@ -13,5 +15,7 @@ public interface EmployeeServicesRemote {
 	Boolean deleteEmployee(Employee employee);
 
 	Boolean updateEmployee(Employee employee);
+
+	List<Employee> findAllEmployees();
 
 }
