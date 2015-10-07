@@ -1,5 +1,7 @@
 package services.impl;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -34,6 +36,12 @@ public class LeavesManagement implements LeavesManagementRemote,
 		} catch (Exception e) {
 		}
 		return b;
+	}
+
+	@Override
+	public List<Leave> findLeavesDoneByManagerId(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
