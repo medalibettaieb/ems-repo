@@ -4,8 +4,6 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="ems">
 		<jta-data-source>java:jboss/datasources/MySQLDS</jta-data-source>
-		<class>entities.Employee</class>
-		<class>entities.Department</class>
 	<!-- 	<class>training.entities.oneToOneBi.A</class>
 		<class>training.entities.oneToOneBi.B</class>
 		<class>training.entities.oneToOneUni.C</class>
