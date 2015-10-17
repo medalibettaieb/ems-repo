@@ -7,7 +7,6 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotNull;
 
 /**
  * Entity implementation class for Entity: Decision
@@ -15,10 +14,9 @@ import javax.validation.constraints.NotNull;
  */
 @Entity
 public class Decision implements Serializable {
-
+	private StateEnum state;
 	private DecisionId decisionId;
 	private Date dateOfTheDecision;
-	private String state;
 	private static final long serialVersionUID = 1L;
 
 	private User user;
@@ -28,7 +26,7 @@ public class Decision implements Serializable {
 		super();
 	}
 
-	public Decision(String state, User user, Leave leave) {
+	public Decision(StateEnum state, User user, Leave leave) {
 		this.state = state;
 		this.user = user;
 		this.leave = leave;
@@ -44,11 +42,12 @@ public class Decision implements Serializable {
 		this.dateOfTheDecision = dateOfTheDecision;
 	}
 
-	public String getState() {
-		return this.state;
+
+	public StateEnum getState() {
+		return state;
 	}
 
-	public void setState(String state) {
+	public void setState(StateEnum state) {
 		this.state = state;
 	}
 

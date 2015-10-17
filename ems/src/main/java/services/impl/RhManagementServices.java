@@ -10,6 +10,7 @@ import services.interfaces.RhManagementServicesRemote;
 import entities.Decision;
 import entities.Leave;
 import entities.RhManager;
+import entities.StateEnum;
 import entities.User;
 
 /**
@@ -55,7 +56,7 @@ public class RhManagementServices implements RhManagementServicesRemote,
 	}
 
 	@Override
-	public Boolean makeDecision(Integer idManager, Integer idLeave, String state) {
+	public Boolean makeDecision(Integer idManager, Integer idLeave, StateEnum state) {
 		Boolean b = false;
 		try {
 			RhManager managerFound = entityManager.find(RhManager.class,
@@ -66,7 +67,7 @@ public class RhManagementServices implements RhManagementServicesRemote,
 						leaveFound);
 				entityManager.persist(decision);
 			} else {
-				Decision decision = new Decision("7ram", managerFound,
+				Decision decision = new Decision( state, managerFound,
 						leaveFound);
 				entityManager.persist(decision);
 			}

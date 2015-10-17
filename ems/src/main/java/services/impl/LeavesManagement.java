@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import services.interfaces.LeavesManagementLocal;
 import services.interfaces.LeavesManagementRemote;
@@ -38,10 +39,13 @@ public class LeavesManagement implements LeavesManagementRemote,
 		return b;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Leave> findLeavesDoneByManagerId(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		String jpql = "select l from Leave l join l.decisions ds where ds.user.id=:idUser";
+		Query query = entityManager.createQuery(jpql);
+		query.setParameter("idUser", id);
+		return query.getResultList();
 	}
 
 }

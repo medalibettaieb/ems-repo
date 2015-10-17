@@ -5,6 +5,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 import services.interfaces.RhManagementServicesRemote;
+import entities.StateEnum;
 
 public class TestAMakeDecision {
 	public static void main(String[] args) throws NamingException {
@@ -14,7 +15,7 @@ public class TestAMakeDecision {
 		RhManagementServicesRemote proxy = (RhManagementServicesRemote) context
 				.lookup(jndiName);
 
-		System.out.println(proxy.makeDecision(3, 1, "ahhh .... tfadlek ????"));
+		System.out.println(proxy.makeDecision(3, 1, StateEnum.INPROGRESS));
 	}
 
 }
