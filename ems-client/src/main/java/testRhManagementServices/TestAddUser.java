@@ -34,9 +34,8 @@ public class TestAddUser {
 		rhManager.setLogin("admin");
 		rhManager.setPassword("admin");
 
-		proxy.addUser(employee);
-		proxy.addUser(employee2);
-		proxy.addUser(rhManager);
+		System.out.println(proxy.addUser(employee));
+		System.out.println(proxy.addUser(employee2));
+		System.out.println(proxy.addUser(rhManager));
 	}
-
 }
